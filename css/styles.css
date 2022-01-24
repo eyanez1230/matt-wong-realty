@@ -11799,7 +11799,7 @@ header.masthead {
 }
 
 .bg-house-2 {
-  background-position: 100px 5px;
+  background-position: center center !important;
   background-repeat: no-repeat;
   background: linear-gradient(
     rgba(0, 0, 0, 0.45), 
