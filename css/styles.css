@@ -11814,3 +11814,7 @@ header.masthead {
   background-color: rgb(255, 255, 255, 0.8);
   padding: 30px;
 }
+
+#marketPredictionFeed > div.loading {
+  text-align: center;
+}
