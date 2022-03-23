@@ -184,18 +184,6 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">About Me</h2>
-                <h3 class="section-subheading text-muted">I am a premier agent taht ranks in the top 7% of agents in
-                    Southern California. Originally from Nassau, The Bahammas,
-                    I moved to Southern California in 2005 to pursue higher education. After graduating from UCLA, I
-                    worked as an Executive Team Leader at Target, managing the front
-                    end and guest experiences at the Commerce store in Los Angeles, California.</h3>
-                <h3 class="section-subheading text-muted">Since my time in California, I have fallen in love with the
-                    great weather and the friendly people which is why I chose to work, stay, and reside
-                    in the San Gabriel Valley.</h3>
-                <h3 class="section-subheading text-muted">My specialty lie within residential real estate, helping
-                    investors and first time home buyers buy, sell, lease, or rent a home.
-                    Wether it is an investment property or a personal residence, I have vast knowledge to help and guide
-                    clients through the entire home buying process.</h3>
             </div>
             <div class="row">
                 <div class="col-lg-4">
@@ -204,7 +192,7 @@
                     <div class="team-member">
                         <img class="mx-auto rounded-circle" src="assets/img/misc/headshot.jpg" alt="..." />
                         <h4>Matthew Wong</h4>
-                        <p class="text-muted">Realtor</p>
+                        <p class="text-muted">Realtor - BRE# 02013717</p>
                         <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/mattwongrealtor"
                             target="_blank"><i class="fab fa-instagram"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/MattwongSGVRealtor"
@@ -216,6 +204,26 @@
                 </div>
                 <div class="col-lg-4">
                 </div>
+            </div>
+            <div class="text-center">
+                <h3 class="section-subheading text-muted" style="line-height:27px">I am a premier
+                    agent that ranks in the top 7% of agents in
+                    Southern California. Originally from Nassau, The Bahammas,
+                    I moved to Southern California in 2005 to pursue higher education. After graduating from UCLA, I
+                    worked as an Executive Team Leader at Target, managing the front
+                    end and guest experiences at the Commerce store in Los Angeles, California.
+                </h3>
+
+                <h3 class="section-subheading text-muted" style="line-height:27px">
+                    Since my time in California, I have fallen in love with the
+                    great weather and the friendly people which is why I chose to work, stay, and reside
+                    in the San Gabriel Valley.</h3>
+                <h3 class="section-subheading text-muted" style="line-height:27px;margin-bottom:40px;">
+                    My specialty lie within residential real estate, helping
+                    investors and first time home buyers buy, sell, lease, or rent a home.
+                    Wether it is an investment property or a personal residence, I have vast knowledge to help and guide
+                    clients through the entire home buying process.
+                </h3>
             </div>
             <!-- <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
@@ -328,7 +336,7 @@
 </html>
 
 <script>
-    $("#submitButton").on("click", function(e) {
+    $("#submitButton").on("click", function (e) {
         e.preventDefault();
         onSubmit();
     })
@@ -347,7 +355,7 @@
 
     function getFormData($form) {
         let unindexed_array = $form.serializeArray();
-        let indexed_array = {'receiver': 'eyanez1230@gmail.com', company: "Matthew Wong Realty"};
+        let indexed_array = { 'receiver': 'eyanez1230@gmail.com', company: "Matthew Wong Realty" };
 
         $.map(unindexed_array, function (n, i) {
             indexed_array[n['name']] = n['value'];
