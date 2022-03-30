@@ -302,8 +302,8 @@
                     </div>
                     <!-- Submit Button-->
                     <div class="text-center">
-                        <button data-sitekey="6Lf7IiofAAAAADrccuDZuNaAZFuqmNjK1mK-MdS6"
-                            data-callback='submitForm' class="g-recaptcha btn btn-primary btn-xl text-uppercase">Send
+                        <button
+                            data-callback='submitForm' class="btn btn-primary btn-xl text-uppercase">Send
                             Message</button>
                     </div>
                 </form>
@@ -333,7 +333,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
 </body>
 
 </html>
@@ -379,13 +379,13 @@
     }
 
     async function submitForm() {
-        grecaptcha.execute();
-        let captchaResponse = grecaptcha.getResponse();
+        // grecaptcha.execute();
+        // let captchaResponse = grecaptcha.getResponse();
         let form = document.getElementById('contactForm');
 
-        if (form.checkValidity() === false || captchaResponse === "") {
-            $("#submitErrorMessage").show();
-        } else {
+        // if (form.checkValidity() === false || captchaResponse === "") {
+        //     $("#submitErrorMessage").show();
+        // } else {
             let contactUsForm = $("#contactForm");
             let data = getFormData(contactUsForm);
 
@@ -400,7 +400,7 @@
                 $("#submitErrorMessage").show();
             }
 
-            grecaptcha.reset();
-        }
+        //     grecaptcha.reset();
+        // }
     }   
 </script>
