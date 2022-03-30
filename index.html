@@ -303,7 +303,7 @@
                     <!-- Submit Button-->
                     <div class="text-center">
                         <button data-sitekey="6Lf7IiofAAAAADrccuDZuNaAZFuqmNjK1mK-MdS6"
-                            data-callback='onSubmit' class="g-recaptcha btn btn-primary btn-xl text-uppercase">Send
+                            data-callback='submitForm' class="g-recaptcha btn btn-primary btn-xl text-uppercase">Send
                             Message</button>
                     </div>
                 </form>
@@ -378,8 +378,7 @@
         return response;
     }
 
-    async function onSubmit() {
-        console.log(onSubmit.caller);
+    async function submitForm() {
         grecaptcha.execute();
         let captchaResponse = grecaptcha.getResponse();
         let form = document.getElementById('contactForm');
