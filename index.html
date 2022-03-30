@@ -302,7 +302,7 @@
                     <!-- Submit Button-->
                     <div class="text-center">
                         <button type="submit" data-sitekey="6Lf7IiofAAAAADrccuDZuNaAZFuqmNjK1mK-MdS6"
-                            data-callback='onSubmit' class="g-recaptcha btn btn-primary btn-xl text-uppercase"
+                             class="g-recaptcha btn btn-primary btn-xl text-uppercase"
                             id="submitButton">Send
                             Message</button>
                     </div>
@@ -340,7 +340,6 @@
 
 <script>
     $("#submitButton").on("click", function (e) {
-
         grecaptcha.execute();
         let captchaResponse = grecaptcha.getResponse();
         e.preventDefault();
