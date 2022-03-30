@@ -301,8 +301,9 @@
                     </div>
                     <!-- Submit Button-->
                     <div class="text-center">
-                        <button type="submit" data-sitekey="6Lf7IiofAAAAADrccuDZuNaAZFuqmNjK1mK-MdS6" data-callback='onSubmit' 
-                            class="g-recaptcha btn btn-primary btn-xl text-uppercase" id="submitButton">Send
+                        <button type="submit" data-sitekey="6Lf7IiofAAAAADrccuDZuNaAZFuqmNjK1mK-MdS6"
+                            data-callback='onSubmit' class="g-recaptcha btn btn-primary btn-xl text-uppercase"
+                            id="submitButton">Send
                             Message</button>
                     </div>
                 </form>
@@ -339,6 +340,10 @@
 
 <script>
     $("#submitButton").on("click", function (e) {
+
+        grecaptcha.execute();
+        let captchaResponse = grecaptcha.getResponse();
+        console.log(captchaResponse);
         e.preventDefault();
         onSubmit();
     })
@@ -385,8 +390,8 @@
     async function onSubmit() {
 
         grecaptcha.execute();
-        let form = document.getElementById('contactForm');
         let captchaResponse = grecaptcha.getResponse();
+        let form = document.getElementById('contactForm');
         console.log(captchaResponse);
 
         if (form.checkValidity() === false || captchaResponse === "") {
