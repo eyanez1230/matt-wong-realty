@@ -253,13 +253,14 @@
                             <div class="form-group">
                                 <!-- Name input-->
                                 <input class="form-control" id="name" type="text" name="name" placeholder="Your Name *"
-                                    data-sb-validations="required" required="required"/>
+                                    data-sb-validations="required" required="required" />
                                 <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <div class="form-group">
                                 <!-- Email address input-->
                                 <input class="form-control" id="email" name="email" type="email"
-                                    placeholder="Your Email *" data-sb-validations="required,email" required="required"/>
+                                    placeholder="Your Email *" data-sb-validations="required,email"
+                                    required="required" />
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.
                                 </div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
@@ -267,7 +268,7 @@
                             <div class="form-group mb-md-0">
                                 <!-- Phone number input-->
                                 <input class="form-control" id="phone" name="phone" type="tel"
-                                    placeholder="Your Phone *" data-sb-validations="required "required="required" />
+                                    placeholder="Your Phone *" data-sb-validations="required " required="required" />
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is
                                     required.
                                 </div>
@@ -401,5 +402,7 @@
                 $("#submitErrorMessage").show();
             }
         }
+
+        grecaptcha.reset();
     }   
 </script>
