@@ -385,7 +385,7 @@
     async function onSubmit() {
 
         grecaptcha.execute();
-        let form = $('#contactForm');
+        let form = $('#contactForm')[0];
         let captchaResponse = grecaptcha.getResponse();
         console.log(captchaResponse);
 
