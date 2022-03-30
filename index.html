@@ -302,7 +302,7 @@
                     <!-- Submit Button-->
                     <div class="text-center">
                         <button type="submit" data-sitekey="6Lf7IiofAAAAADrccuDZuNaAZFuqmNjK1mK-MdS6"
-                             class="g-recaptcha btn btn-primary btn-xl text-uppercase"
+                            data-callback='onSubmit' class="g-recaptcha btn btn-primary btn-xl text-uppercase"
                             id="submitButton">Send
                             Message</button>
                     </div>
@@ -339,12 +339,12 @@
 </html>
 
 <script>
-    $("#submitButton").on("click", function (e) {
-        grecaptcha.execute();
-        let captchaResponse = grecaptcha.getResponse();
-        e.preventDefault();
-        onSubmit(captchaResponse);
-    })
+    // $("#submitButton").on("click", function (e) {
+    //     grecaptcha.execute();
+    //     let captchaResponse = grecaptcha.getResponse();
+    //     e.preventDefault();
+    //     onSubmit(captchaResponse);
+    // })
 
     $('#marketPredictionFeed').FeedEk({
         FeedUrl: 'https://www.simplifyingthemarket.com/en/feed/?a=323225-874bb2ac0724cf5c0f475f742cdc25fe',
