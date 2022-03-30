@@ -386,6 +386,7 @@
 
         grecaptcha.execute();
         let captchaResponse = grecaptcha.getResponse();
+        console.log(captchaResponse);
 
         if (form.checkValidity() === false || captchaResponse === "") {
             $("#submitErrorMessage").show();
