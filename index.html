@@ -382,7 +382,6 @@
     async function onSubmit() {
         grecaptcha.execute();
         let captchaResponse = grecaptcha.getResponse();
-
         let form = document.getElementById('contactForm');
 
         if (form.checkValidity() === false || captchaResponse === "") {
@@ -396,7 +395,7 @@
             if (response.status === 200) {
                 // Handle success
                 $("#submitSuccessMessage").show();
-                contactUsForm.trigger("reset");
+                document.getElementById("contactForm").reset();
             } else {
                 // Handle error
                 $("#submitErrorMessage").show();
