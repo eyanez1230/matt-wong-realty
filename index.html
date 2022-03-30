@@ -379,6 +379,7 @@
     }
 
     async function onSubmit() {
+        console.log(onSubmit.caller);
         grecaptcha.execute();
         let captchaResponse = grecaptcha.getResponse();
         let form = document.getElementById('contactForm');
