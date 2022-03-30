@@ -392,7 +392,8 @@
         if (form.checkValidity() === false || captchaResponse === "") {
             $("#submitErrorMessage").show();
         } else {
-            let data = getFormData(form);
+            let contactUsForm = $("#contactForm");
+            let data = getFormData(contactUsForm);
 
             let response = await sendEmail(data);
 
