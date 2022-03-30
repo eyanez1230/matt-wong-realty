@@ -343,9 +343,8 @@
 
         grecaptcha.execute();
         let captchaResponse = grecaptcha.getResponse();
-        console.log(captchaResponse);
         e.preventDefault();
-        onSubmit();
+        onSubmit(captchaResponse);
     })
 
     $('#marketPredictionFeed').FeedEk({
@@ -387,12 +386,8 @@
         return response;
     }
 
-    async function onSubmit() {
-
-        grecaptcha.execute();
-        let captchaResponse = grecaptcha.getResponse();
+    async function onSubmit(captchaResponse) {
         let form = document.getElementById('contactForm');
-        console.log(captchaResponse);
 
         if (form.checkValidity() === false || captchaResponse === "") {
             $("#submitErrorMessage").show();
