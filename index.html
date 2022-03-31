@@ -293,6 +293,11 @@
                             <div class="fw-bolder">Form submission successful!</div>
                         </div>
                     </div>
+                    <div id="pleaseWaitMessage">
+                        <div class="text-center text-white mb-3">
+                            <div class="fw-bolder">Please wait...</div>
+                        </div>
+                    </div>
                     <!-- Submit error message-->
                     <!---->
                     <!-- This is what your users will see when there is-->
@@ -329,7 +334,6 @@
     </footer>
     <!-- Bootstrap core JS-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/feedEK.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
@@ -365,6 +369,7 @@
 
     async function sendEmail(data) {
         $("#submitContactUs").attr('disabled', 'disabled');
+        $("#pleaseWaitMessage").show();
         const url = "https://vbzxoqlkll.execute-api.us-west-2.amazonaws.com/prod/contact";
         const response = await fetch(url, {
             method: 'POST',
@@ -376,6 +381,7 @@
             },
             body: JSON.stringify(data)
         });
+        $("#pleaseWaitMessage").hide();
         $("#submitContactUs").attr('disabled', false);
 
         return response;
