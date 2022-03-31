@@ -2,6 +2,18 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-99KH4CX90L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-99KH4CX90L');
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
@@ -359,7 +371,7 @@
 
     function getFormData($form) {
         let unindexed_array = $form.serializeArray();
-        let indexed_array = { receiver: 'eyanez1230@gmail.com', sender: 'mail@sgvsold.com', company: "Matthew Wong Realty" };
+        let indexed_array = { receiver: 'mattjwongre@gmail.com', sender: 'mail@sgvsold.com', company: "Matthew Wong Realty" };
 
         $.map(unindexed_array, function (n, i) {
             indexed_array[n['name']] = n['value'];
