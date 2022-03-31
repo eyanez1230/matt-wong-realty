@@ -353,7 +353,7 @@
 
     function getFormData($form) {
         let unindexed_array = $form.serializeArray();
-        let indexed_array = { 'receiver': 'mattjwongre@gmail.com', company: "Matthew Wong Realty" };
+        let indexed_array = { receiver: 'mattjwongre@gmail.com', sender: 'mail.sgvsold.com', company: "Matthew Wong Realty" };
 
         $.map(unindexed_array, function (n, i) {
             indexed_array[n['name']] = n['value'];
