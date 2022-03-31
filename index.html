@@ -365,22 +365,17 @@
     async function sendEmail(data) {
         $("#submitContactUs").attr('disabled', 'disabled');
         const url = "https://vbzxoqlkll.execute-api.us-west-2.amazonaws.com/prod/contact";
-        try {
-            const response = await fetch(url, {
-                method: 'POST',
-                cache: 'no-cache',
-                headers: {
-                    "Content-Type": "application/json",
-                    // "Access-Control-Allow-Origin": "*",
-                    // "Access-Control-Allow-Credentials": true
-                },
-                body: JSON.stringify(data)
-            });
-        } catch (error) {
-            console.log(error);
-        } finally {
-            $("#submitContactUs").attr('disabled', false);
-        }
+        const response = await fetch(url, {
+            method: 'POST',
+            cache: 'no-cache',
+            headers: {
+                "Content-Type": "application/json",
+                // "Access-Control-Allow-Origin": "*",
+                // "Access-Control-Allow-Credentials": true
+            },
+            body: JSON.stringify(data)
+        });
+        $("#submitContactUs").attr('disabled', false);
 
         return response;
     }
