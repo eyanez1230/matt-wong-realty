@@ -302,8 +302,8 @@
                     </div>
                     <!-- Submit Button-->
                     <div class="text-center">
-                        <button data-sitekey="6Lf45CofAAAAABDGXn-mVQEZFgqNSDZp3OU9P1VE"
-                            data-callback='onSubmit' class="g-recaptcha btn btn-primary btn-xl text-uppercase">Send
+                        <button data-sitekey="6Lf45CofAAAAABDGXn-mVQEZFgqNSDZp3OU9P1VE" data-callback='onSubmit'
+                            id="submitContactUs" class="g-recaptcha btn btn-primary btn-xl text-uppercase">Send
                             Message</button>
                     </div>
                 </form>
@@ -363,17 +363,24 @@
     }
 
     async function sendEmail(data) {
+        $("#submitContactUs").attr('disabled', 'disabled');
         const url = "https://vbzxoqlkll.execute-api.us-west-2.amazonaws.com/prod/contact";
-        const response = await fetch(url, {
-            method: 'POST',
-            cache: 'no-cache',
-            headers: {
-                "Content-Type": "application/json",
-                // "Access-Control-Allow-Origin": "*",
-                // "Access-Control-Allow-Credentials": true
-            },
-            body: JSON.stringify(data)
-        });
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                cache: 'no-cache',
+                headers: {
+                    "Content-Type": "application/json",
+                    // "Access-Control-Allow-Origin": "*",
+                    // "Access-Control-Allow-Credentials": true
+                },
+                body: JSON.stringify(data)
+            });
+        } catch (error) {
+            console.log(error);
+        } finally {
+            $("#submitContactUs").attr('disabled', false);
+        }
 
         return response;
     }
